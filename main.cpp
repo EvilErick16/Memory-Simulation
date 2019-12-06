@@ -7,6 +7,7 @@
 #include <iostream>
 using std::cout;
 using std::cin;
+using std::endl;
 
 #include "memory.h"
 
@@ -28,16 +29,40 @@ using std::cin;
 	iii. Check for process terminations
 */
 
+// Function prototypes
+void findFactors(int);
+
 int main(){
 
-    int memSize = 2000;
-    Memory mem;
+    int memorySize = 0;
+  
+    cout << "Enter memory size: ";
+    cin >> memorySize; 
 
-    cout << "Memory size when Memory is initialized: " << mem.getMemorySize() << std::endl;
-
-    mem.setMemorySize(memSize);
-
-    cout << "Memory size after using setMemorySize function: " << mem.getMemorySize() << std::endl;
 
   return 0;
+}
+
+
+void findFactors(int memorySize) {
+
+  for (int i = 2; i < memorySize; i++) {
+
+    int k = 2;
+    float multiple;
+
+    do {
+
+      multiple = i * k; 
+
+      if (multiple == memorySize) {
+        cout << "Factors of " << memorySize << ": " << i << "*" << k << endl;
+      }
+
+      else {
+      k++;
+      }
+    } while (multiple < memorySize);
+  }
+  cout << "You entered a Prime number, please select another number" << enld; 
 }
