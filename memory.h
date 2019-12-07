@@ -8,6 +8,15 @@
 #include <vector>
 using std::vector;
 
+struct Process {
+	int PID;
+	int arrivalTime;
+	int runTime;
+	int memorySegmentSize;
+};
+
+
+// TODO: finish memory class definition
 class Memory {
 
     private:
