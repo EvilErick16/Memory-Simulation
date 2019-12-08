@@ -90,7 +90,7 @@ int main(){
   for (int time = 0; time < 100000; time++){
     mm.checkArrivals(time);
   }
-      // check arrivals
+
       // move to memory if possible
       // check terminations
   
